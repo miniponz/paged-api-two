@@ -2,26 +2,8 @@ import './html-equal.js';
 
 const test = QUnit.test;
 
+import makeSetlistTemplateHeader from '../src/make-header-template.js';
 
-function makeSetlistTemplateHeader(setlists) {
-    const date = setlists.setlist[0].eventDate;
-    const venue = setlists.setlist[0].venue.name;
-    const tour = setlists.setlist[0].tour.name;
-    const url = setlists.setlist[0].url;
-    
-    const html = /*html*/ `         
-    <li id="${date}">
-      <p>Date: <span>${date}</span></p>
-      <p>Venue: <span>${venue}</span></p>
-      <p>Tour: <span>${tour}</span></p>
-      <p> <a href=${url}>Setlist:</a></p>
-    </li>
-`;
-
-    const template = document.createElement('template');
-    template.innerHTML = html;
-    return template.content;
-}
 
 test('template recreates hard coded HTML header for each set when passed setlist result from API', assert => {
     //arrange
