@@ -1,4 +1,4 @@
-// https://api.setlist.fm/rest/1.0/search/setlists?artistName=phish&cityName=new%20york&p=1
+// https://api.setlist.fm/rest/1.0/search/setlists?artistName=phish&cityName=seattle&p=1
 
 {
     "type": "setlists",
