@@ -1,6 +1,6 @@
 import data from '../data/sample-data.js';
-import makeSetlistTemplateHeader from './make-header-template.js';
+import makeSetlistTemplate from './make-header-template.js';
 
-makeSetlistTemplateHeader(data);
+makeSetlistTemplate(data);
 
 

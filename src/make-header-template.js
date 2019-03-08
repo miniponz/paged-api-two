@@ -1,4 +1,4 @@
-export default function makeSetlistTemplateHeader(setlists) {
+export default function makeSetlistTemplate(setlists) {
     const setlist = setlists.setlist;
 
     setlist.forEach(setlist => {
@@ -9,14 +9,17 @@ export default function makeSetlistTemplateHeader(setlists) {
         const sets = setlist.sets.set;
     
         const html = /*html*/ `         
-            <li id="${date}" class="show-info">
-                <p>Date: <span>${date}</span></p>
-                <p>Venue: <span>${venue}</span></p>
-                <p>Tour: <span>${tour}</span></p>
-                <p> <a href=${url}>Setlist:</a></p>
+            <li id="${date}" class="show">
+                <section class="show-info">
+                    <h3>${venue}</h3>
+                    <p>Date: <span>${date}</span></p>
+                    <p>Tour: <span>${tour}</span></p>
+                    <p> <a href=${url}>Setlist.fm</a></p>
+                </section>
+                <section class="sets">
                 ${sets.map(set => {
                     return /*html*/ `
-                        <ul>
+                        <ul class="set-detail">
                             <p class="set-number">${set.name}</p>
                             ${set.song.map(song => {
                                 return /*html*/ `
@@ -26,6 +29,7 @@ export default function makeSetlistTemplateHeader(setlists) {
                         </ul>
                     `;
                 }).join('')}
+                </section>
             </li>
         `;
         const ul = document.getElementById('setlist-display');
