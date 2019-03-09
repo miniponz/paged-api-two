@@ -40,6 +40,7 @@ test('reads options from query in url', assert => {
     //arrange
     const query = 'artistName=phish&cityName=portland&p=1';
     const expected = {
+        artistName: 'phish',
         cityName: 'portland',
         p: 1
     };

@@ -19,6 +19,7 @@ export function writePageToQuery(existingQuery, page) {
 export function readOptions(query) {
     const searchParams = new URLSearchParams(query);
     const existingQuery = {
+        artistName: searchParams.get('artistName'),
         cityName: searchParams.get('cityName'),
         p: parseInt(searchParams.get('p'))
     };
