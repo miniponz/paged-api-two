@@ -11,3 +11,7 @@ searchForm.addEventListener('submit', event => {
     console.log(newQuery);
     window.location.hash = newQuery;
 });
+
+export function updateCityName(cityName) {
+    citySearch.value = cityName;
+}
