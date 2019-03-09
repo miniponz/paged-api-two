@@ -1,7 +1,8 @@
 export default function makeSetlistTemplate(setlists) {
     const setlist = setlists.setlist;
-
+    console.log(setlist);
     setlist.forEach(setlist => {
+        console.log(setlist);
         const date = setlist.eventDate;
         const venue = setlist.venue.name;
         const tour = setlist.tour.name;
@@ -27,7 +28,7 @@ export default function makeSetlistTemplate(setlists) {
                                 `;
                             }).join('')}
                         </ul>
-                    `;
+                    `; 
                 }).join('')}
                 </section>
             </li>
