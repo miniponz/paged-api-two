@@ -19,6 +19,27 @@ a {
     text-align: center;
 }
 
+#paging-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: baseline;
+    margin: auto
+}
+
+#previous-button, #next-button {
+    background-color:  #CCFF99;
+    border-radius: 8px;
+    margin: 5px;
+    border: none;
+    font-size: 1.5em;
+}
+
+#page, #total-pages {
+    margin: 5px;
+    padding: 5px;
+}
+
 #setlist-display {
     display: flex;
     flex-direction: column;

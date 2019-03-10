@@ -18,8 +18,21 @@
             <input type="text" id="city-input" name="city-input">
             <button>GO!</button>
         </form>
-          <ul id="setlist-display">
-          </ul>
+        <section id="prompt">
+            <p>Enter a City to find setlists</p>
+        </section>
+        <section id="setlist-container" class="hidden">
+            <section id="paging-display">
+                <button id="previous-button"> &lt; &lt;</button>
+                    <p>
+                        Page <span id="page"></span> of
+                        <span id="total-pages"></span>
+                    </p>
+                <button id="next-button"> &gt; &gt;</button>
+            </section>
+            <ul id="setlist-display">
+            </ul>
+        </section>
     </main>
     <footer></footer>
     <script type="module" src="/src/index.js"></script>

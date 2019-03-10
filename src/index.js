@@ -3,6 +3,7 @@ import makeSetlistTemplate, { clearResults } from './make-header-template.js';
 import { readOptions } from './hash-query.js';
 import { updateCityName } from './search-component.js';
 import makeCityUrl from './make-search-url.js';
+import { updatePagingInfo } from './paging-component.js';
 
 makeSetlistTemplate(data);
 
@@ -30,8 +31,15 @@ window.addEventListener('hashchange', () => {
     fetch(proxyUrl + url, settings)
         .then(res => res.json())
         .then(results => {
-            console.log(results);
+            // console.log(results);
             makeSetlistTemplate(results);
+
+            const pagingInfo = {
+                p: results.page,
+                totalPages: Math.ceil(results.total / results.itemsPerPage)
+            };
+            // console.log(pagingInfo);
+            updatePagingInfo(pagingInfo);
         });
 });
 
