@@ -12,5 +12,3 @@ window.addEventListener('hashchange', () => {
     updateCityName(queryOptions.cityName);
 });
 
-
-//NEXT STEP IS MAKE FUNCTION TO CREATE SEARCH URL. equivalent from mob build is "makeSearchMovieUrl()"//
