@@ -40,3 +40,10 @@ export default function makeSetlistTemplate(setlists) {
         ul.appendChild(dom);
     });
 }
+
+export function clearResults() {
+    const ul = document.getElementById('setlist-display');
+    while(ul.children.length > 0) {
+        ul.lastElementChild.remove();
+    }
+}
