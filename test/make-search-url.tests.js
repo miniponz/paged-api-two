@@ -17,5 +17,3 @@ test('url includes artist name, city name, and page', assert => {
 //assert
     assert.equal(url, expected);
 });
-
-// curl -X GET --header 'Accept: application/json' --header 'x-api-key: 3db2f63f-28e5-4d34-84f7-763e7c338be6' 'https://api.setlist.fm/rest/1.0/search/setlists?artistName=phish&cityName=portland&p=1'
