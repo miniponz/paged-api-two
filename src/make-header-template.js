@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default function makeSetlistTemplate(setlists) {
     const setlist = setlists.setlist;
     // console.log(setlist);

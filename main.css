@@ -69,7 +69,8 @@ a {
     color: white;
     background-color: green;
     border-radius: 0 50px 0 50px;
-    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
 }
 
 .sets {
